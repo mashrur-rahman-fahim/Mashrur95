@@ -233,25 +233,33 @@
     </div>
     <script src="index.js"></script>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbygTZv9DSGsHgjZqQdDkxxDNO1sMj5mohgJZbmfAJ0_F4t0mWg0cYgHjdyq6uCECcQ/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
+       const scriptURL = 'https://script.google.com/macros/s/AKfycbygTZv9DSGsHgjZqQdDkxxDNO1sMj5mohgJZbmfAJ0_F4t0mWg0cYgHjdyq6uCECcQ/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+const submitButton = document.querySelector('form button[type="submit"]');
 
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully"
-                    setTimeout(function () {
-                        msg.innerHTML = "";
-                    }, 5000)
-                    form.reset()
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    submitButton.disabled = true; // Disable the submit button
+    submitButton.innerHTML = '<i class="fa fa-spinner fa-spin"></i>'; // Add a loading spinner
 
-                })
-                .catch(error => {
-                    msg.innerHTML = "Try again! Message not sent"
-                })
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function () {
+                msg.innerHTML = "";
+            }, 5000)
+            form.reset()
+            submitButton.disabled = false; // Enable the submit button
+            submitButton.innerHTML = 'SUBMIT'; // Reset the button text
         })
+        .catch(error => {
+            msg.innerHTML = "Try again! Message not sent"
+            submitButton.disabled = false; // Enable the submit button
+            submitButton.innerHTML = 'SUBMIT'; // Reset the button text
+        })
+})
+
     </script>
 </body>
 
