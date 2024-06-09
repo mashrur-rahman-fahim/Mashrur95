@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <title>Mashrur Rahman</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://kit.fontawesome.com/c79a5351c1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#project">PROJECTS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="header-text">
+            <p>STUDENT</p>
+            <br />
+            <h1>Hi, I'm <span>Mashrur Rahman</span></h1>
+            <br />
+            <h2>FROM BANGLADESH</h2>
+        </div>
+    </div>
+
+    <!-- --------------about me------------- -->
+
+    <div id="about">
+        <div class="row">
+            <div class="col-1">
+                <img src="images/profile.jpeg" alt="Image is Loading.." />
+            </div>
+
+            <div class="col-2">
+                <h1>About Me</h1>
+                <br />
+                <p id="description">
+                    My name is Mashrur Rahman, and I am currently pursuing a degree in Computer Science and Engineering
+                    from Ahsanullah University of Science and Technology. I have a passion for thriller movies, enjoying
+                    the suspense and intricate plot twists they offer. As a competitive programmer, I am constantly
+                    honing my skills through various coding competitions. In addition to competitive programming, I have
+                    practical experience in app and web development, having completed several projects in these areas.
+                    These projects include creating a task management app with features such as user authentication and
+                    task scheduling, as well as developing a personal portfolio website showcasing my skills and work.
+                    With a solid foundation in programming and a passion for technology, I am always looking for new
+                    challenges and opportunities to apply my knowledge and skills.
+                </p>
+                <div id="table-tittle">
+                    <p class="tab-links active-link" onclick="opentab('skills')">
+                        SKILLS
+                    </p>
+                    <!-- <p class="tab-links" onclick="opentab('experience')">EXPERIENCE</p> -->
+                    <p class="tab-links" onclick="opentab('edu')">EDUCATION</p>
+                </div>
+                <div class="table-cont active-cont" id="skills">
+                    <ul>
+                        <li>
+                            <span>Web Development</span><br /> HTML, CSS, JavaScript, React, Node.js
+                        </li>
+                        <li>
+                            <span>App Development</span><br />Android Development (DART), Flutter
+                        </li>
+                        <li>
+                            <span>Database Management</span><br />MongoDB
+                        </li>
+                        <li>
+                            <span>Version Control</span><br />Git, GitHub
+                        </li>
+                        <li>
+                            <span>Competitive Programming</span><br />Data Structures, Algorithms, Problem Solving
+                        </li>
+                        <li>
+                            <span>Tools and Platforms</span><br />VS Code, Android Studio, GitHub, Firebase
+                        </li>
+                        <li>
+                            <span>Programming Language</span><br />
+                            HTML, CSS, JAVASCRIPT, C, C++, JAVA, PYTHON, DART
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="table-cont" id="experience">
+                    <ul>
+                        <li><span>Game</span><br />Made by IGraphics</li>
+                        <li>
+                            <span>App Development</span><br />Building android/ios apps by
+                            flutter
+                        </li>
+                        <li>
+                            <span>Programming Language</span><br />
+                            HTML, CSS, JAVASCRIPT, C, C++, JAVA, PYTHON, DART
+                        </li>
+                    </ul>
+                </div> -->
+                <div class="table-cont" id="edu">
+                    <ul>
+                        <li><span>Ahsanullah University of Science and Technology</span><br />
+                            <div>Bachelor of Science in
+                                Computer Science and Engineering (CSE)<br />
+                                <ul>
+                                    <li>
+                                        Currently pursuing, admitted on 12th September 2022
+                                    </li>
+                                    <li>
+                                        CGPA: 3.67
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li><span>Chandpur Govt. College
+                            </span><br />
+                            <div>Higher Secondary Certificate (HSC)<br />
+                                <ul>
+                                    <li>
+                                        Graduated in 2021
+                                    </li>
+                                    <li>
+                                        GPA: 5.00
+                                    </li>
+                                    <li>
+                                        GROUP: Science
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li><span>Hasan Ali Govt. High School
+                            </span><br />
+                            <div>Secondary School Certificate (HSC)<br />
+                                <ul>
+                                    <li>
+                                        Graduated in 2019
+                                    </li>
+                                    <li>
+                                        GPA: 5.00
+                                    </li>
+                                    <li>
+                                        GROUP: Science
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------My PROJECTS-------------- -->
+    <div id="project">
+        <h1>My Projects</h1>
+        <div class="list">
+            <div>
+                <i class="fa-solid fa-gamepad"></i>
+                <h2>GAME DEVELOPMENT</h2>
+
+
+                <p> Spiderman-Ultimate is an action game developed with the iGraphics library. Players control
+                    Spiderman, using arrow keys to move and the spacebar to throw webs at enemies. The goal is to defeat
+                    all enemies and face a powerful boss in a final showdown. The game features engaging graphics,
+                    smooth animations, and challenging gameplay.</p>
+
+
+                <a href="https://github.com/mashrur-rahman-fahim/Spiderman-Ultimate">Github Repository</a>
+
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>APP DEVELOPMENT</h2>
+
+                <p> UniCraft is an app developed using Flutter and coded in Dart, designed to enhance productivity and
+                    organization. With UniCraft, users can upload and store files, set reminders for important events,
+                    and publish notices. The app combines sleek design with practical features to provide a seamless
+                    user experience.</p>
+
+
+                <a href="https://github.com/mashrur-rahman-fahim/Uni-Craft">Github Repository</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>WEB DEVELOPMENT</h2>
+
+                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+                    pariatur eveniet non deserunt aliquam illo illum, repellendus
+                    voluptatibus omnis quia similique totam sint quaerat corrupti nesciunt
+                    deleniti iusto vitae saepe?</p>
+
+
+                <a href="https://github.com/mashrur-rahman-fahim/Enchant_Tech">Github Repository</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ----------------------contact----------------    -->
+
+    <div class="contact" id="contact">
+        <div class="contact_left">
+            <h1>CONTACT ME</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>mashrur950@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>+880-140-214-8869</p>
+            <div class="social_icons">
+                <a href="https://www.facebook.com/hypertextPhoenix"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/hypertextphoenix/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/mashrur-rahman-fahim"><i class="fa-brands fa-github"></i></a>
+
+            </div>
+
+        </div>
+        <div class="contact-right">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="message" rows="6" placeholder="Message"></textarea>
+                <button type="submit">SUBMIT</button>
+            </form>
+            <span id="msg"></span>
+        </div>
+    </div>
+    <div class="copyright">
+        Copyright 2024 © Mashrur Rahman. All Rights Reserved.
+    </div>
+    <script src="index.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbygTZv9DSGsHgjZqQdDkxxDNO1sMj5mohgJZbmfAJ0_F4t0mWg0cYgHjdyq6uCECcQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = "";
+                    }, 5000)
+                    form.reset()
+
+                })
+                .catch(error => {
+                    msg.innerHTML = "Try again! Message not sent"
+                })
+        })
+    </script>
+</body>
+
+
+</html>

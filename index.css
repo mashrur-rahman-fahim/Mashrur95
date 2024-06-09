@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif; /* Changed to Roboto font */
+  box-sizing: border-box;
+}
+
+#header {
+  background-image: url(images/background.png);
+  height: 890px;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animation for fade in effect */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+nav ul {
+  width: 600px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+/* Animation for slide in effect */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #1e3050; /* Updated color */
+  font-weight: bold;
+  transition: 0.5s;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #b2363f; /* Updated color */
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #04bade;
+}
+
+#header-text {
+  margin-left: 200px;
+  margin-top: 250px;
+  font-size: 30px;
+  animation: fadeInText 2s ease-in-out;
+}
+
+/* Animation for text fade in effect */
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#header-text h1 span {
+  color: #04bade;
+}
+
+/* ----------------------about me--------------- */
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+
+.col-1 {
+  flex-basis: 35%;
+}
+
+.col-1 img {
+  width: 90%;
+  border-radius: 15px;
+  padding-left: 200px;
+  margin-top: 50px;
+  animation: zoomIn 1s ease-in-out;
+}
+
+/* Animation for image zoom in effect */
+@keyframes zoomIn {
+  from { transform: scale(0.8); }
+  to { transform: scale(1); }
+}
+
+.col-2 {
+  flex-basis: 56%;
+  padding-top: 30px;
+}
+
+.col-2 h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+#description {
+  width: 1000px;
+  font-size: 24px;
+  margin-left: 10px;
+  text-align: justify;
+  animation: fadeInDescription 1.5s ease-in-out;
+}
+
+/* Animation for description fade in effect */
+@keyframes fadeInDescription {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#table-tittle {
+  cursor: pointer;
+  display: flex;
+  margin: 30px 0px 30px;
+  margin-left: 10px;
+}
+
+.tab-links {
+  font-weight: bold;
+  font-size: 22px;
+  margin-right: 40px;
+  position: relative;
+  animation: slideInTab 1s ease-in-out;
+}
+
+/* Animation for tab slide in effect */
+@keyframes slideInTab {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #b2363f; /* Updated color */
+  position: absolute;
+  left: 0px;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.table-cont ul li {
+  margin: 14px;
+  font-size: 19px;
+  list-style: none;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.table-cont ul li span {
+  color: #04bade;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.table-cont {
+  display: none;
+}
+
+.table-cont.active-cont {
+  display: block;
+}
+
+.table-cont div {
+  padding-left: 10px;
+}
+
+.table-cont ul li ul li {
+  list-style: circle;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+/* ----------------projects----------- */
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.list div {
+  background: #e7e9f0;
+  padding: 40px;
+  font-weight: 400;
+  font-size: 17px;
+  border-right: 10px;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+  animation: fadeInProject 1s ease-in-out;
+}
+
+/* Animation for project fade in effect */
+@keyframes fadeInProject {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.list div i {
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+
+#project {
+  padding: 40px 150px;
+}
+
+.list div h2 {
+  padding-bottom: 15px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.list div a {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 19px;
+  color: rgb(79, 79, 222);
+}
+
+.list div:hover {
+  background: #04bade;
+  transform: translateY(-10px);
+}
+
+/* Smooth scroll behavior for whole HTML */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------------------contact------------ */
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact_left {
+  margin-left: 200px;
+  font-size: 24px;
+  animation: fadeInContact 1s ease-in-out;
+}
+
+/* Animation for contact section fade in effect */
+@keyframes fadeInContact {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.contact_left h1 {
+  margin-bottom: 20px;
+}
+
+.contact_left p {
+  font-size: 22px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.contact_left p i {
+  margin-right: 20px;
+  color: #04bade;
+}
+
+.contact_left .social_icons i {
+  color: #1e3050;
+  font-size: 34px;
+  margin-left: 20px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.social_icons i:hover {
+  transform: translateY(-5px);
+}
+
+.contact-right {
+  margin-right: 200px;
+  margin-top: 100px;
+}
+
+.contact-right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  background: #1e3050;
+  color: white;
+  padding: 20px;
+  margin: 6px 0;
+  font-size: 19px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  background: #0aa7c7;
+}
+
+.contact button {
+  font-size: 20px;
+  width: 150px;
+  font-weight: bold;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background: #0aa7c7;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+}
+
+.contact button:hover {
+  background: #b2363f;
+  transform: scale(1.1);
+}
+
+/* ----------------------------copyright------------- */
+
+.copyright {
+  width: 100%;
+  padding: 25px 0;
+  text-align: center;
+  background: #1e3050;
+  margin-top: 70px;
+  color: white;
+  animation: fadeInCopyright 1.5s ease-in-out;
+}
+
+/* Animation for copyright fade in effect */
+@keyframes fadeInCopyright {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 767px) {
+  #header {
+    height: 600px;
+  }
+
+  nav ul {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  #header-text {
+    margin-left: 20px;
+    margin-top: 150px;
+    font-size: 24px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-1 {
+    flex-basis: auto;
+  }
+
+  .col-1 img {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 30px;
+  }
+
+  .col-2 {
+    flex-basis: auto;
+    padding-top: 20px;
+  }
+
+  .col-2 h1 {
+    font-size: 36px;
+  }
+
+  #description {
+    width: auto;
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  #table-tittle {
+    margin: 20px 0;
+    margin-left: 0;
+  }
+
+  .tab-links {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+
+  .table-cont ul li {
+    font-size: 16px;
+  }
+
+  .table-cont ul li span {
+    font-size: 18px;
+  }
+
+  #project {
+    padding: 40px 20px;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact_left {
+    margin-left: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .contact_left p {
+    font-size: 18px;
+  }
+
+  .contact_left .social_icons i {
+    font-size: 28px;
+  }
+
+  .contact-right {
+    margin-right: 0;
+    margin-top: 40px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 16px;
+  }
+
+  .contact button {
+    font-size: 16px;
+    width: 120px;
+    height: 40px;
+  }
+}
+
+/* For screens between 768px and 1199px (tablets) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #header {
+    height: 700px;
+  }
+
+  nav ul {
+    width: 80%;
+  }
+
+  #header-text {
+    margin-left: 100px;
+    margin-top: 200px;
+    font-size: 26px;
+  }
+
+  .col-1 img {
+    padding-left: 100px;
+  }
+
+  .col-2 h1 {
+    font-size: 42px;
+  }
+
+  #description {
+    width: 80%;
+    font-size: 20px;
+  }
+
+  #project {
+    padding: 40px 50px;
+  }
+
+  .contact_left {
+    margin-left: 100px;
+    font-size: 20px;
+  }
+
+  .contact_left p {
+    font-size: 20px;
+  }
+
+  .contact-right {
+    margin-right: 100px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 18px;
+  }
+
+  .contact button {
+    font-size: 18px;
+    width: 130px;
+    height: 45px;
+  }
+}
+/* ----------------------contact------------ */
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact_left {
+  margin-left: 200px;
+  font-size: 24px;
+  animation: fadeInContact 1s ease-in-out;
+}
+
+/* Animation for contact section fade in effect */
+@keyframes fadeInContact {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.contact_left h1 {
+  margin-bottom: 20px;
+}
+
+.contact_left p {
+  font-size: 22px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.contact_left p i {
+  margin-right: 20px;
+  color: #04bade;
+}
+
+.contact_left .social_icons i {
+  color: #1e3050;
+  font-size: 34px;
+  margin-left: 20px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.social_icons i:hover {
+  transform: translateY(-5px);
+}
+
+.contact-right {
+  margin-right: 200px;
+  margin-top: 100px;
+}
+
+.contact-right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  background: linear-gradient(to right, #1e3050, #04bade);
+  color: white;
+  padding: 20px;
+  margin: 6px 0;
+  font-size: 19px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  background: linear-gradient(to right, #04bade, #1e3050);
+}
+
+.contact button {
+  font-size: 20px;
+  width: 150px;
+  font-weight: bold;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background: linear-gradient(to right, #04bade, #1e3050);
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+}
+
+.contact button:hover {
+  background: linear-gradient(to right, #1e3050, #b2363f);
+  transform: scale(1.1);
+}
+
+/* ----------------------------copyright------------- */
+
+.copyright {
+  width: 100%;
+  padding: 25px 0;
+  text-align: center;
+  background: #1e3050;
+  margin-top: 70px;
+  color: white;
+  animation: fadeInCopyright 1.5s ease-in-out;
+}
+
+/* Animation for copyright fade in effect */
+@keyframes fadeInCopyright {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 767px) {
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact_left {
+    margin-left: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .contact_left p {
+    font-size: 18px;
+  }
+
+  .contact_left .social_icons i {
+    font-size: 28px;
+  }
+
+  .contact-right {
+    margin-right: 0;
+    margin-top: 40px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 16px;
+  }
+
+  .contact button {
+    font-size: 16px;
+    width: 120px;
+    height: 40px;
+  }
+}
+
+/* For screens between 768px and 1199px (tablets) */
+/* @media (min-width: 768px) and (max-width: 1199px)  */
+/* ... [Your existing CSS remains unchanged until...] ... */
+
+/* Refining typography and adding soft shadows */
+#header-text h1, 
+.col-2 h1, 
+.contact_left h1 {
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+#description, 
+.contact_left p {
+  line-height: 1.6;
+}
+
+.list div, 
+.contact-right form input, 
+.contact-right form textarea {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Enhanced button styles */
+.contact button {
+  background: linear-gradient(to right, #04bade, #1e3050);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contact button:hover {
+  background: linear-gradient(to right, #1e3050, #b2363f);
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtle hover effects and refined transitions */
+.nav ul li a:hover {
+  color: #04bade;
+  transform: translateY(-2px);
+}
+
+.list div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ... [Rest of your existing CSS continues as is, unless you want to apply similar enhancements to other sections.] ... */
+
+
