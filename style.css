@@ -377,6 +377,14 @@ form textarea:focus {
 
 /* For screens smaller than 768px (mobile devices) */
 @media (max-width: 767px) {
+  .col-2{
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+  .contact{padding-left: 10px;
+  padding-right: 10px;
+  }
   #header {
     height: 600px;
   }
@@ -484,6 +492,14 @@ form textarea:focus {
 
 /* For screens between 768px and 1199px (tablets) */
 @media (min-width: 768px) and (max-width: 1199px) {
+  .col-2{
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+  .contact{padding-left: 10px;
+  padding-right: 10px;
+  }
   #header {
     height: 700px;
   }
